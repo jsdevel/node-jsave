@@ -14,7 +14,16 @@
     "type": "git",
     "url": "https://github.com/jsdevel/node-jsave.git"
   },
-  "keywords": [],
+  "keywords": [
+    "json",
+    "store",
+    "save",
+    "load",
+    "local",
+    "disk",
+    "fs",
+    "filesystem"
+  ],
   "contributors": [],
   "license": "MIT",
   "bugs": {
