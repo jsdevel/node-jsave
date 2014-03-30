@@ -1,0 +1,31 @@
+{
+  "name": "jsave",
+  "version": "0.5.0",
+  "description": "Save and load JSON to and from disk.",
+  "author": "Joseph Spencer",
+  "scripts": {
+    "jshint": "jshint lib && jshint --config .jshintrc-test test",
+    "mocha": "mocha -w",
+    "cover": "istanbul cover ./node_modules/mocha/bin/_mocha",
+    "report": "istanbul report cobertura",
+    "test": "npm run jshint && npm run cover"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jsdevel/node-jsave.git"
+  },
+  "keywords": [],
+  "contributors": [],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jsdevel/node-jsave/issues"
+  },
+  "devDependencies": {
+    "should": "~3.2.0",
+    "mocha": "~1.18.2",
+    "istanbul": "~0.2.6"
+  },
+  "dependencies": {
+    "mkdirp": "~0.3.5"
+  }
+}
