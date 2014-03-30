@@ -11,7 +11,7 @@ disk, just call `save()`.  It's really that simple.
 
 You can also load data from an existing file by calling `jsave.load(filePath);`.
 
-Both `save` and `load` are unobtrusive, meaning that the file path you provide will
+Both `save` and `load` are unobtrusive.  The file path you provide will
 be created in the event it doesn't exist.  Attempting to `save` or `load` to a directory
 will throw an error.
 
@@ -45,7 +45,7 @@ Here we'll load some existing JSON that's already on disk.
 var jsave = require('jsave');
 var myData = jsave.load('/tmp/some-other-file');
 myData.boo = 'ahhhh';
-myData.save();//as you would expect, /tmp/some-other-file now has boo too :)
+myData.save();//as you would expect, /tmp/some-other-file now has boo ahhhh :)
 ````
 
 ##LICENSE
