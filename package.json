@@ -1,6 +1,7 @@
 {
   "name": "jsave",
   "version": "0.5.3",
+  "main":"lib/jsave.js",
   "description": "Save and load JSON to and from disk.",
   "author": "Joseph Spencer",
   "scripts": {
