@@ -37,7 +37,24 @@ myData.sushi = 'rolled';
 myData.save();//some-file now contains '{"sushi":"rolled"}';
 ````
 
-###Loading data
+###Loading a new file
+Here we'll load a file that doesn't exist yet.  `jsave` will create the file for us
+and return an object.  Once we `save` the object, future calls to this file will
+load our data.
+
+````javascript
+var jsave = require('jsave');
+var myData = jsave.load('/tmp/file-i-want');
+if(!myData.burritos){
+  myData.burritos = [];
+  myData.burritos.push({name:'Beacon', type:'breakfast'});
+}
+myData.save();
+// /tmp/file-i-want now contains:
+//{"burritos":[{"name":"Beacon","type":"breakfast"}]}
+````
+
+###Loading an existing file
 
 Here we'll load some existing JSON that's already on disk.
 
