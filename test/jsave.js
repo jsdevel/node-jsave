@@ -80,10 +80,27 @@ describe('jsave', function(){
             obj.save();
             read(file).should.equal('{"a":5}');
           });
+
           it('allows new data to be saved as well', function(){
             obj.jimmie = 'some person';
             obj.save();
             JSON.parse(read(file)).jimmie.should.equal('some person');
+          });
+
+          it('does not explode with circular references', function(){
+            var parsed;
+            var readFile;
+            obj.boo = 'wow';
+            obj.foo = obj;
+            obj.coo = {
+              a:5
+            };
+            obj.save();
+            readFile = read(file);
+            parsed = JSON.parse(readFile);
+            parsed.boo.should.equal('wow');
+            parsed.coo.a.should.equal(5);
+            assert.equal(parsed.foo, null, 'foo is null');
           });
         });
       });
